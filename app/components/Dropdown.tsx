@@ -12,7 +12,7 @@ DropdownMenuTrigger,
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import Link from 'next/link'
 import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
-import { FaCalendarCheck, FaHome , FaSignOutAlt} from 'react-icons/fa'
+import { FaCalendarCheck, FaHome , FaSignOutAlt , FaBed } from 'react-icons/fa'
 import { AvatarImage } from '@radix-ui/react-avatar'
 
 
@@ -49,6 +49,15 @@ const Dropdown = ({user}: {user:any}) => {
               </DropdownMenuShortcut>
             </DropdownMenuItem>
           </Link>
+          <Link href='/rooms'>
+            <DropdownMenuItem>
+              Habitaciones
+              <DropdownMenuShortcut className='text-lg text-accent'>
+                <FaBed />
+              </DropdownMenuShortcut>
+            </DropdownMenuItem>
+          </Link>
+          
           <Link href='/dashboard'>
             <DropdownMenuItem>
               Reserva
