@@ -24,7 +24,7 @@ const Header = async () => {
         <div className="flex flex-col md:flex-row md:justify-between gap-6">
           <div className="flex items-center gap-5 justify-center xl:w-max">
             <Link href='/'>
-              <Image src='/isologo.jpg' width={160} height={160} alt="" />
+              <Image src='/logopng.png' width={160} height={160} alt="" />
             </Link>
             <div className="w-[1px] h-[40px] bg-gray-300"></div>
             <div className="flex gap-2">
