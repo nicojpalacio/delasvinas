@@ -200,13 +200,15 @@ const CarouselPrevious = React.forwardRef<
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
+  const validSize = size ?? "md" // Asigna un tamaño por defecto si size es null
+
   return (
     <Button
       ref={ref}
       variant={variant}
-      size={size}
+      size={validSize as "sm" | "md" | "Lg"} // Asegura que sea un tamaño permitido
       className={cn(
-        "absolute  h-8 w-8 rounded-full",
+        "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "-left-12 top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -229,11 +231,13 @@ const CarouselNext = React.forwardRef<
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 
+  const validSize = size ?? "md" // Asigna un tamaño por defecto si size es null
+
   return (
     <Button
       ref={ref}
       variant={variant}
-      size={size}
+      size={validSize as "sm" | "md" | "Lg"} // Asegura que sea un tamaño permitido
       className={cn(
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"

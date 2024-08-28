@@ -28,7 +28,7 @@ const BannerTop = () => {
   ]  
   
     return (
-    <div className='bg-yellow-50 dark:bg-primary'>
+    <div className='bg-ladrillo dark:bg-primary'>
         <Carousel className='w-full max-w-4xl mx-auto'
         plugins={[
             Autoplay({
@@ -41,8 +41,8 @@ const BannerTop = () => {
             <div>
                 <Card className='shadow-none border-none bg-transparent'>
                     <CardContent className='flex flex-col justify-center p-2 items-center'>
-                        <p className='sm:text-lg text-wrap dark:text-secondary'>{title}</p>
-                        <p className='text-xs sm:text-sm text-wrap dark:text-secondary'>{description}</p>
+                        <p className='sm:text-lg text-wrap text-tertiary'>{title}</p>
+                        <p className='text-xs sm:text-sm text-wrap text-tertiary'>{description}</p>
                     </CardContent>
                 </Card>
             </div>

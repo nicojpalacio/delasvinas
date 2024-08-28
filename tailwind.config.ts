@@ -44,6 +44,9 @@ const config = {
         gre:{
           DEFAULT:'#a09faf'
         },
+        ladrillo:{
+          DEFAULT:"#B56751"
+        }
       },
       keyframes: {
         "accordion-down": {
