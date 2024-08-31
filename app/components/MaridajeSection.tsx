@@ -31,6 +31,7 @@ const MaridajeSection = () => {
       </div>
     </div>
   </div>
+  <div className='h-[350px] bg-cover lg:h-[600px] bg-[url("/vinedos.JPG")] bg-center mt-5 bg-fixed bg-no-repeat'></div>
 </section>
   )
 }

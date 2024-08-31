@@ -30,6 +30,7 @@ const BannerTop = () => {
     return (
     <div className='bg-ladrillo dark:bg-primary'>
         <Carousel className='w-full max-w-4xl mx-auto'
+        opts={{loop:true}}
         plugins={[
             Autoplay({
                 delay:3000

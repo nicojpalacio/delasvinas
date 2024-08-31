@@ -13,7 +13,7 @@ const links = [
     },
     {
         name:'Vinos',
-        path:'/'
+        path:'/wines'
     },
     {
         name:'Sobre nosotros',
