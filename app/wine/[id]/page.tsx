@@ -29,14 +29,14 @@ const WinePage: React.FC<WinePageProps> = ({ params }) => {
 
   return (
     <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
-      <h1 className="text-4xl font-bold text-center text-accent">{wine.nombre}</h1>
+      <h1 className="text-4xl font-bold text-center ">{wine.nombre}</h1>
       <img
         src={wine.url}
         alt={wine.nombre}
         className="w-full max-w-md mx-auto mt-4 rounded-lg"
       />
-      <p className="mt-4 text-xl text-center"><strong>Tipo:</strong> {wine.tipo}</p>
-      <p className="mt-2">{wine.descripcion}</p>
+      <p className="mt-4 text-xl text-center"><strong className='text-accent'>Tipo:</strong> {wine.tipo}</p>
+      <p className="mt-2 ">{wine.descripcion}</p>
     </div>
   );
 };

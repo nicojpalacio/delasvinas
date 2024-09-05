@@ -12,7 +12,7 @@ DropdownMenuTrigger,
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import Link from 'next/link'
 import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
-import { FaCalendarCheck, FaHome , FaSignOutAlt , FaBed } from 'react-icons/fa'
+import { FaCalendarCheck, FaHome , FaSignOutAlt , FaBed,FaAngleDown   } from 'react-icons/fa'
 import { AvatarImage } from '@radix-ui/react-avatar'
 
 
@@ -35,6 +35,7 @@ const Dropdown = ({user}: {user:any}) => {
             </div>
             <p className='text-sm font-semibold'>{user.email}</p>
           </div>
+          <FaAngleDown />
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className='w-72 mt-4 p-4 flex flex-col gap-2' align='start' >
