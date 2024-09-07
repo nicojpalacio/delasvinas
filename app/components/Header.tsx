@@ -1,10 +1,11 @@
 import Link from "next/link"
 import Image from "next/image"
-import { FaInstagram, FaFacebook } from 'react-icons/fa'
+import { FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa'
 
 const socials = [
   { icon: <FaInstagram />, href: 'https://www.instagram.com/lasvinas/'},
-  { icon: <FaFacebook />, href: 'https://www.facebook.com/vinasenflor/' }
+  { icon: <FaFacebook />, href: 'https://www.facebook.com/vinasenflor/' },
+  { icon: <FaWhatsapp />, href: 'https://www.facebook.com/vinasenflor/' }
 ]
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs/components"

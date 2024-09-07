@@ -8,8 +8,8 @@ const links = [
     { name: 'Inicio', path: '/' },
     { name: 'Habitaciones', path: '/rooms' },
     { name: 'Vinos', path: '/wines' },
-    { name: 'Home', path: '/' },
-    { name: 'Home', path: '/' },
+    { name: 'Sobre Nosotros', path: '/about' },
+    { name: 'Contacto', path: '/contact' },
 ];
 
 const MobileNav = () => {

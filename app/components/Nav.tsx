@@ -6,7 +6,7 @@ const links = [
   { name: 'Inicio', path: '/' },
   { name: 'Habitaciones', path: '/rooms' },
   { name: 'Vinos', path: '/wines' },
-  { name: 'Sobre nosotros', path: '/aboutus' },
+  { name: 'Sobre nosotros', path: '/about' },
   { name: 'Contacto', path: '/contact' },
 ]
 

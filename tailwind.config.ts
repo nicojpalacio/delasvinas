@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss"
-
+import daisyui from "daisyui";
 const config = {
   darkMode: ["class"],
   content: [
@@ -22,7 +22,8 @@ const config = {
       secondary:'var(--font-urbanist)',
     },
     backgroundImage:{
-      hero: 'url("/posadalasvinas2.jpg")'
+      hero: 'url("/posadalasvinas2.jpg")',
+      about: 'url("/posadalasvinas.jpg")'
     },
     extend: {
       colors:{
@@ -64,7 +65,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),require('daisyui'),],
 } satisfies Config
 
 export default config

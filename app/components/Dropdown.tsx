@@ -1,31 +1,33 @@
+'use client'
 import {
-DropdownMenu,
-DropdownMenuContent,
-DropdownMenuGroup,
-DropdownMenuItem,
-DropdownMenuLabel,
-DropdownMenuSeparator,
-DropdownMenuShortcut,
-DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
-import { Avatar, AvatarFallback } from '@/components/ui/avatar'
-import Link from 'next/link'
-import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
-import { FaCalendarCheck, FaHome , FaSignOutAlt , FaBed,FaAngleDown   } from 'react-icons/fa'
-import { AvatarImage } from '@radix-ui/react-avatar'
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import Link from 'next/link';
+import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components';
+import { FaCalendarCheck, FaHome, FaSignOutAlt, FaBed, FaAngleDown, FaAngleUp } from 'react-icons/fa';
+import { AvatarImage } from '@radix-ui/react-avatar';
+import { useState } from 'react';
 
+const Dropdown = ({ user }: { user: any }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const Dropdown = ({user}: {user:any}) => {
-  console.log(user)
   return (
-    <DropdownMenu>
+    <DropdownMenu onOpenChange={(open) => setIsOpen(open)}>
       <DropdownMenuTrigger asChild>
         <div className='flex items-center gap-2 cursor-pointer'>
           <Avatar>
-            <AvatarImage src={user.picture}/>
+            <AvatarImage src={user.picture} />
             <AvatarFallback className='bg-accent text-white'>
-            {`${user.given_name[0]} ${user.family_name[0]}`}
+              {`${user.given_name[0]} ${user.family_name[0]}`}
             </AvatarFallback>
           </Avatar>
           <div>
@@ -35,18 +37,18 @@ const Dropdown = ({user}: {user:any}) => {
             </div>
             <p className='text-sm font-semibold'>{user.email}</p>
           </div>
-          <FaAngleDown />
+          {isOpen ? <FaAngleUp /> : <FaAngleDown />}
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className='w-72 mt-4 p-4 flex flex-col gap-2' align='start' >
+      <DropdownMenuContent className='w-72 mt-4 p-4 flex flex-col gap-2' align='start'>
         <DropdownMenuLabel className='text-base'>Mi Cuenta</DropdownMenuLabel>
-        <DropdownMenuSeparator/>
+        <DropdownMenuSeparator />
         <DropdownMenuGroup className='flex flex-col gap-2'>
           <Link href='/'>
             <DropdownMenuItem>
               Pagina Principal
               <DropdownMenuShortcut className='text-lg text-accent'>
-                <FaHome/>
+                <FaHome />
               </DropdownMenuShortcut>
             </DropdownMenuItem>
           </Link>
@@ -58,12 +60,12 @@ const Dropdown = ({user}: {user:any}) => {
               </DropdownMenuShortcut>
             </DropdownMenuItem>
           </Link>
-          
+
           <Link href='/dashboard'>
             <DropdownMenuItem>
               Reserva
               <DropdownMenuShortcut className='text-lg text-accent'>
-                <FaCalendarCheck/>
+                <FaCalendarCheck />
               </DropdownMenuShortcut>
             </DropdownMenuItem>
           </Link>
@@ -72,13 +74,13 @@ const Dropdown = ({user}: {user:any}) => {
           <DropdownMenuItem>
             Log Out
             <DropdownMenuShortcut className='text-lg text-accent'>
-              <FaSignOutAlt/>
+              <FaSignOutAlt />
             </DropdownMenuShortcut>
           </DropdownMenuItem>
         </LogoutLink>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
-}
+  );
+};
 
-export default Dropdown
+export default Dropdown;
